@@ -7,7 +7,7 @@ if [ "$2" = "" ]; then
 	exit
 fi
 adjusted=`echo $2 | sed "s/-/_/g"` 
-output="$2_output_file.csv"
+output="$adjusted_output_file.csv"
 spider_location="$1"/"$1"/spiders/download_"$adjusted".py
 
 if [ ! -d "$1/$1/spiders" ]; then
